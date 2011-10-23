@@ -1,14 +1,14 @@
 /*------------------------------------------------------
  ファイル名  ScoreManager.java
  日付        2004/07/25
- 作成者      Si_Densetsu
+ 作成者      Susumu ISHIGAMI
  -------------------------------------------------------*/
 
 import java.io.*;
 
 /**
  * ハイスコアを管理するクラス
- * @author Si_Densetsu
+ * @author Susumu ISHIGAMI
  * @version 0.2.2-8/17
  */
 public final class ScoreManager {

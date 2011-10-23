@@ -1,12 +1,12 @@
 /*------------------------------------------------------
  ファイル名  ConfigValue.java
  日付        2004/08/18
- 作成者      Si_Densetsu
+ 作成者      Susumu ISHIGAMI
  -------------------------------------------------------*/
 
 /**
  * 設定を保持するクラス
- * @author Si_Densetsu
+ * @author Susumu ISHIGAMI
  * @version 0.3.2-8/23
  */
 public final class ConfigValue {

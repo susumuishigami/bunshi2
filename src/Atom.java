@@ -1,12 +1,12 @@
 /*------------------------------------------------------
  ファイル名  Atom.java
  日付        2004/07/25
- 作成者      Si_Densetsu
+ 作成者      Susumu ISHIGAMI
  -------------------------------------------------------*/
 
 /**
  * 原子を表すクラス
- * @author Si_Densetsu
+ * @author Susumu ISHIGAMI
  * @version 0.4-7/25
  */
 public abstract class Atom {

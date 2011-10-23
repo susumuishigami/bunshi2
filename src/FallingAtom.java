@@ -1,12 +1,12 @@
 /*------------------------------------------------------
 ファイル名  FallingAtom.java
 日付        2004/07/25
-作成者      Si_Densetsu
+作成者      Susumu ISHIGAMI
 -------------------------------------------------------*/
 
 /**
  * 落下する原子を表すクラス
- * @author Si_Densetsu
+ * @author Susumu ISHIGAMI
  * @version 0.1.4-7/27
  */
 public final class FallingAtom extends Atom {

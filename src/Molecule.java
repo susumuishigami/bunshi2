@@ -1,12 +1,12 @@
 /*------------------------------------------------------
  ファイル名  Molecule.java
  日付        2004/08/15
- 作成者      Si_Densetsu
+ 作成者      Susumu ISHIGAMI
  -------------------------------------------------------*/
 
 /**
  * 分子型
- * @author Si_Densetsu
+ * @author Susumu ISHIGAMI
  * @version 0.2.5-8/21
  */
 public final class Molecule {

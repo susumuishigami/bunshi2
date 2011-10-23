@@ -3,7 +3,7 @@
 
   ファイル名     BunshiDoCoMo.java
   日付           2004/07/18
-  作成者         Si_Densetsu
+  作成者         Susumu ISHIGAMI
 -------------------------------------------------------*/
 
 import com.nttdocomo.ui.*;
@@ -17,7 +17,7 @@ import javax.microedition.io.Connector;
 
 /**
  * 分子作成をi-modeで実行するためのクラス
- * @author  Si_Densetsu
+ * @author  Susumu ISHIGAMI
  * @version 0.5.1-8/29
  */
 public final class BunshiDoCoMo extends IApplication {
@@ -127,7 +127,7 @@ public final class BunshiDoCoMo extends IApplication {
 
 /**
  * 分子作成ゲーム画面
- * @author  Si_Densetsu
+ * @author  Susumu ISHIGAMI
  * @version 0.5.1-8/29
  */
 final class MainCanvas extends Canvas implements TimerListener{
@@ -432,7 +432,7 @@ final class MainCanvas extends Canvas implements TimerListener{
 
 /**
  * 分子作成タイトル・バージョン
- * @author  Si_Densetsu
+ * @author  Susumu ISHIGAMI
  * @version 0.3.1-8/23
  */
 final class TitleCanvas extends Canvas {
@@ -467,7 +467,7 @@ final class TitleCanvas extends Canvas {
 			
 			g.setFont(Font.getFont(Font.SIZE_SMALL));
 
-			g.drawString("(c)2004 Si_Densetsu",   width * 12/40, height * 39/40);
+			g.drawString("(c)2004 Susumu ISHIGAMI",   width * 12/40, height * 39/40);
 			
 
 			//g.drawScaledImage(img, 88, 68, 64, 64, 0, 0, 32, 32);
@@ -489,7 +489,7 @@ final class TitleCanvas extends Canvas {
 
 			g.drawString("Push Soft_1 key !", width * 2/20, height * 15/20);
 			
-			g.drawString("制作 Si_Densetsu", width * 1/20, height * 35/40);
+			g.drawString("制作 Susumu ISHIGAMI", width * 1/20, height * 35/40);
 			g.drawString("原案 えいちつ\u301cお\u301c", width * 1/20, height * 39/40);
 			break;
 		}
@@ -551,7 +551,7 @@ final class TitleCanvas extends Canvas {
 
 /**
  * 分子作成スコア画面
- * @author  Si_Densetsu
+ * @author  Susumu ISHIGAMI
  * @version 0.5.1-8/29
  */
 final class ScoreCanvas extends Canvas {
@@ -682,7 +682,7 @@ final class ScoreCanvas extends Canvas {
 
 /**
  * スコアの個別画面
- * @author  Si_Densetsu
+ * @author  Susumu ISHIGAMI
  * @version 0.5.0-8/26
  */
 
@@ -845,7 +845,7 @@ final class ScoreForm extends Panel implements SoftKeyListener {
 }
 /**
  * 分子作成設定画面
- * @author  Si_Densetsu
+ * @author  Susumu ISHIGAMI
  * @version 0.5.0-8/18
  */
 

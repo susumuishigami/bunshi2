@@ -1,14 +1,14 @@
 /*------------------------------------------------------
   ファイル名  Bunshi.java
   日付        2004/07/25
-  作成者      Si_Densetsu
+  作成者      Susumu ISHIGAMI
 -------------------------------------------------------*/
 
 import java.util.Random;
 
 /**
  * 一回分のゲームを制御するメインクラス
- * @author  Si_Densetsu
+ * @author  Susumu ISHIGAMI
  * @version 0.4.3-8/24
  */
 

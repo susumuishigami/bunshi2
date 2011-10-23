@@ -1,14 +1,14 @@
 /*------------------------------------------------------
  ファイル名  Mission.java
  日付        2004/08/22
- 作成者      Si_Densetsu
+ 作成者      Susumu ISHIGAMI
  -------------------------------------------------------*/
 
 import java.util.*;
 
 /**
  * 指令を管理するクラス。
- * @author Si_Densetsu
+ * @author Susumu ISHIGAMI
  * @version 0.3.2-8/23
  */
 public class Mission {
