@@ -1,0 +1,187 @@
+「物質作成～分子ができるよ～」開発記録
+
+2004/07/18
+	BunshiDoCoMo: v0.0; // 名前のみ
+	MainCanvas:   v0.0; // 名前のみ
+	Bunshi:       v0.0; // 名前のみ
+
+2004/07/25 (1)
+	VERSION = 0.1;
+	Size = 8092Bytes;
+	Atom:         v0.1; // 抽象原子クラスの完成
+	FallingAtom:  v0.1; // 落下する原子クラスの骨格ほぼできる。
+	PlacedAtom:   v0.1; // 配置された原子クラスの骨格ほぼできる。
+	                    // 上下左右とのリンク。
+	BunshiDoCoMo: v0.1; // Start, newGame(mode): 骨格できる。
+	                    // resetData(): 名前のみ。
+	TitleCanvas   v0.1; // タイトル文字⇔バージョンの切り替え可。
+	                    // BunshiDoCoMoのnewGame(mode), dataReset()を呼ぶ。 
+	Bunshi:       v0.1; // goNext(), fall(), moveLeft/Right()の実装。
+	                    // landは判定ルーチン除き実装。
+	Field:        v0.1; // land(), amount()の実装。原子を落下させられる。
+	ScoreManager: v0.0; // 名前のみ。
+
+2004/07/25 (2)
+	VERSION = 0.1.1;      // 原子が落下し積み上がっていく。
+	Size = 9748Bytes;
+	FallingAtom:  v0.1.1; // 初期位置を決める。。
+	BunshiDoCoMo: v0.1.1; // ゲームを開始できる。
+	MainCanvas:   v0.1.1; // 原子が落下する。左右操作可能。
+	Bunshi:       v0.1.1; // createNext();
+	
+2004/07/26
+	VERSION = 0.1.2;      // 積み上がったらゲームオーバー。
+	Size = 10214
+	MainCanvas:   v0.1.2; // land()とfall()を独立させ，endCheck()させているが，
+	                      // 美しくないかも…。原子の色分け。枠，スコアなど表示。
+	Bunshi:       v0.1.2; // isEnd(), endFlag 導入。
+	
+2004/07/26
+	VERSION = 0.1.3;      // 全画面再描画では重いので，落下時は部分描画するようにした。
+	Size = 11290
+	MainCanvas:   v0.1.3; // allrepaintフラグの導入。
+
+2004/07/27
+	VERSION = 0.1.4;      // タイムアタック・ゲームオーバー時の描画。↓移動時のポイントボーナス。
+	Size = 11608;
+	MainCanvas:   v0.1.4; // land()とfall()にボーナス点。isGameOver, isPausingフラグ。残り時間。
+	Bunshi:       v0.1.4; // 残り時間を計測し，0を下回ったらisEnd()はtrueを返す。
+	FallingAtom:  v0.1.4; // preX_, preY_の初期値。
+	TitleCanvas:  v0.1.4; // 設定・スコアの項目，バージョンの表記スタイル改正。
+	
+2004/07/28
+	VERSION = 0.1.5;	  // ポーズや終了時などの細かい調整。
+	Size = 12667;
+	MainCanvas:   v0.1.5; // 枠表示PolyLine使用に変更。ポーズ時・終了時などのラベル手直し。
+	TitleCanvas:  v0.1.5; // 絵文字・画像を使用。
+
+2004/07/29
+	VERSION = 0.1.6;	  // ポーズや終了時などの細かい調整。
+	Size = 13664;
+	BunshiDoCoMo: v0.1.6; // ゲーム終了のメソッドを持ち，終了時ランキングに入れる。
+	MainCanvas:   v0.1.6; // ゲーム終了時得点が最新でなかったので，それを修正。
+	ScoreManager: v0.1.6; // 絵文字・画像を使用。
+
+2004/08/07
+	VERSION = 0.1.7;	  // ランキング表示。
+	Size = 16919;
+	BunshiDoCoMo: v0.1.7; // スコア画面を分離。
+	GameUtil:     v0.1;   // SimpleTime系メソッド実装。
+	ScoreManager: v0.1.7; // getData()でデータがないときデフォルトデータを返す。
+	ScoreCanvas:  v0.1;   // スコアを表示する。
+	
+2004/08/15
+	VERSION = 0.2.0;      // 水素・酸素・窒素の反応。ただしエフェクトなし。
+	Bunshi:       v0.2;   // search()系関数，close(), generate();
+	PlacedAtom:   v0.2;   // 上へ左右へのリンク廃止
+	Molecule:     v0.1;   // 分子定数を表す。
+	
+2004/08/15
+	VERSION = 0.2.1;        // 反応エフェクト付き。だんだんプログラムが汚い。
+	Bunshi:       v0.2.1;   // checkメソッドの導入。
+	MainCanvas:   v0.2.1;   // checkingFlag等導入。
+
+2004/08/17
+	VERSION = 0.2.2;        // スコアの保存が可能になる。
+	BunshiDoCoMo: v0.2.2;   // saveData(), loadData();など導入。リセット時警告。
+	ScoreManager: v0.2.2;   // write(out), read(in)導入。
+	GameResult  : v0.2.2;   // write(out), read(in)導入。
+	
+2004/08/17
+	VERSION = 0.2.3;        // ３原子分子反応
+	Bunshi      : v0.2.3;   // search3系導入。
+	Molecule    : v0.2.3;   // ３原子分子情報定数の登録。
+	
+2004/08/18
+	VERSION = 0.2.4;        // 設定画面の骨格
+	BunshiDoCoMo: v0.2.4;   // goConfig();
+	ConfigValue : v0.2.4;   // 骨格のみ。
+	ConfigForm  : v0.2.4;   // コンポーネントの配置。
+	
+2004/08/18
+	VERSION = 0.2.5;        // 設定画面のバグ修正
+	ConfigForm  : v0.2.5;   // バグ修正。
+	
+2004/08/21
+	VERSION = 0.2.6;        // 4原子分子対応。
+	Bunshi      : v0.2.6;   // search4()系導入。
+	Molecule    : v0.2.6;   // 4原子以上情報記入。
+
+2004/08/21
+	VERSION = 0.2.7;        // 5原子分子対応
+	Bunshi      : v0.2.7;   // search5()系導入。
+
+2004/08/21
+	VERSION = 0.2.8;        // メタノール，蟻酸，硝酸対応
+	Bunshi      : v0.2.8;   // searchOH(), searchMethanol()など導入。
+	
+2004/08/21
+	VERSION = 0.2.9;        // バグ修正
+	Bunshi      : v0.2.9;   // OHカウント周りのバグ修正
+
+2004/08/22
+	VERSION = 0.2.10;        // 水素核融合
+	Bunshi      : v0.2.10;   // searchNuclearR()系導入。エネルギーが増える。
+
+2004/08/22
+	VERSION = 0.2.11;        // 酢酸発生
+	Bunshi      : v0.2.11;   // searchAceticAcid()系導入。
+	BunshiDoCoMo: v0.2.11;   // 「水素核融合発生」は変なので修正。
+
+2004/08/23
+	VERSION = 0.2.12;        // 時差対応
+	ScoreCanvas : v0.2.12;   // 表示する時間をUTFから日本時刻に変更。
+
+2004/08/23
+	VERSION = 0.3.0;         // 指令導入
+	MainCanvas  : v0.3.0;    // 指令を表示する。 指令クリアの知らせなし。
+	Bunshi      : v0.3.0;    // 指令をクリアするとsuccess()で10000点追加。
+	Mission     : v0.3.0;    // 指令を制御するクラス。
+
+2004/08/23
+	VERSION = 0.3.1;         // スコアの個別表示
+	TitleCanvas : v0.3.1;    // About表示時「終了」ラベル消去。
+	ScoreCanvas : v0.3.1;    // 結果をダイアログで表示する。
+	ConfigValue : v0.3.1;    // ラベル定数追加。
+	GameUtil    : v0.3.1;    // showSimpleDate()導入。
+
+2004/08/23
+	VERSION = 0.3.2;         // スコアの個別表示
+	Mission     : v0.3.2;    // 指令を少々厳しく。
+	Bunshi      : v0.3.2;    // 指令でメタンとフロンをグループ化。
+	GameUtil    : v0.3.1;    // showSimpleDate()導入。
+
+2004/08/24
+	VERSION = 0.4.0;         // エネルギーを使えるようにした。
+	Bunshi      : v0.4.0;    // useEnergy();導入。
+	MainCanvas  : v0.4.0;    // [0]～[6]の入力でエネルギー使う。休憩時効果表示。
+	Field       : v0.4.0;    // energize(byte)導入。
+	Atom        : v0.4.0;    // energize(byte)実装。
+
+2004/08/24
+	VERSION = 0.4.1;         // 難易度調整
+	Bunshi      : v0.4.1;    // [0]時エネルギー初期化忘れミス修正。連鎖時のエネルギー増加量を少な目に。	
+
+2004/08/24
+	VERSION = 0.4.2;         // バグ修正など
+	Bunshi      : v0.4.2;    // エネルギー使用[4]の発動と消費の関係が逆を修正。
+	                         // エネルギーの効果を落下中の原子にも与える。
+
+2004/08/26
+	VERSION = 0.4.3;         // バグ修正など
+	Bunshi      : v0.4.3;    // 二硫化炭素発生時「二酸化窒素」と表示されるバグ修正。
+	ScoreCanvas : v0.4.3;    // 個別表示をダイアログ形式からフォームを扱うのに変更。
+	ScoreForm   : v0.4.3;    // 個別スコアを表示するフォーム。
+
+2004/08/28
+	VERSION = 0.5.0;         // 結果のコメント表示
+	ConfigForm  : v0.5.0;    // 本田先輩のFOMAで設定時エラーで終了してしまうので，表示を変えた。
+	ScoreForm   : v0.5.0;    // 危険度やゲーマー度を計算し結果コメントを出す。
+
+2004/08/29
+	VERSION = 0.5.1;         // バグ修正
+	ConfigForm  : v0.5.1;    // 選択しても変化がない不具合修正。
+	ScoreCanvas : v0.5.1;    // showScore(5)から(6)へフォールスルーしてしまうバグ修正。
+	BunshiDoCoMo: v0.5.1;    // ゲーム終了時に結果表示。
+	
+	
